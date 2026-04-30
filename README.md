@@ -1,2 +1,2 @@
-github
+git
 github2
