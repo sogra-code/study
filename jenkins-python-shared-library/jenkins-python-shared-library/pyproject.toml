@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hello-app"
+version = "1.0.0"
+description = "Учебное Python-приложение для сборки в Jenkins с Shared Library"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.scripts]
+hello-app = "hello_app.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v"
+pythonpath = ["src"]
