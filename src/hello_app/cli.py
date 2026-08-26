@@ -12,14 +12,14 @@ def build_parser() -> argparse.ArgumentParser:
     """Собирает аргументы командной строки."""
     parser = argparse.ArgumentParser(
         prog="hello-app",
-        description="Учебное Python-приложение для сборки в Jenkins.",
+        description="Учебное Python-приложение для сборки",
     )
     parser.add_argument("--name", default="world", help="Кого поприветствовать")
     return parser
 
 
 def main(argv: list[str] | None = None) -> int:
-    """Точка входа: печатает приветствие и возвращает код возврата."""
+    """печатает приветствие и возвращает код возврата."""
     args = build_parser().parse_args(argv)
     print(greet(args.name))
     return 0
